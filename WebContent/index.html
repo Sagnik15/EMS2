@@ -1,0 +1,53 @@
+<!Doctype html>
+<html>
+<head>
+<script>
+    $(document).ready(function() {
+        function disableBack() { window.history.forward() }
+
+      
+    });
+</script>
+    <style>
+    
+    </style>
+    <title>Index</title>
+    <link href="index.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript">
+
+    if (top.location!= self.location) {
+        top.location = self.location.href
+                   //or you can use your logout page as
+                   //top.location='logout.jsp' here...
+    }
+
+</script>
+    </head>
+    
+    <body onload="disableBack()">
+        <div id="head-div">
+    <section id="header-section">
+  
+            <span id="life">LIFE</span><span id="pharma">PHARMA</span>
+      
+       
+        </section>
+            <nav id="head-nav">
+            <ul>
+            <!-- <li class="nav-list"><a href="about.html" target="display-area" >ABOUT US</a></li> -->
+                 <li class="nav-list"><a href="login.html" >LOGIN</a></li>
+            </ul>
+            </nav>
+            </div>
+    
+    <section id="body-section">
+        <div id="div-body">
+   <iframe id="window" src="dummy.html" name="display-area"></iframe>
+        </div>
+        </section>
+    <footer id="foot-er">
+    &copy;Copyright &nbsp;| &nbsp;Sagnik
+		Upadhyay & Priyanka Dasari &nbsp;|&nbsp; 2016
+    </footer>
+    </body>
+</html>

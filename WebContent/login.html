@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" language="javascript">   
+function disableBackButton()
+{
+window.history.forward()
+}  
+disableBackButton();  
+window.onload=disableBackButton();  
+window.onpageshow=function(evt) { if(evt.persisted) disableBackButton() }  
+window.onunload=function() { void(0) }  
+</script>
+<script type="text/javascript">
+
+    if (top.location!= self.location) {
+        top.location = self.location.href
+                   //or you can use your logout page as
+                   //top.location='logout.jsp' here...
+    }
+
+</script>
+
+
+<meta charset="ISO-8859-1">
+<title>Login Page</title>
+<link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body onload="noBack();">
+<section id="head-section">
+<span ><a href="index.html" id="life">LIFE</a></span><span ><a href="index.html" id="pharma">PHARMA</a></span><span id="head">EXPIRY MANAGEMENT SYSTEM</span>
+</section>
+<section id="main-section">
+
+
+<div id="main-div">
+<article id="login-header">LOGIN</article>
+<form action="login.jsp" method="post" id="main-form">
+
+<div id="data"></div>
+<br>
+    <table id="login-table">
+<tr><td><input type="text" class="text-box" placeholder="Enter User Name" name="uid"></td></tr>
+        <tr></tr>
+       <tr><td> <input type="password" class="text-box" placeholder="Enter Password" name="pwd"></td></tr>
+  <tr></tr>
+        <tr><td><select name="role" class="text-box2"><option selected="selected">ROLE</option><option value="admin">ADMIN</option><option value="user">USER</option></select></td></tr>
+    </table>
+<br> 
+    
+    <span id="login-btn"><input type="submit" value="Login" class="btn"><br>
+<input type="reset" value="Clear" class="btn"><br>
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+<a href="ForgotPassword.jsp" id="frgt-pswd">Forgot Password</a></span>
+</form>
+</div>
+</section>
+<footer id="footer"> &copy;Copyright &nbsp;| &nbsp;Sagnik
+		Upadhyay  & Priyanka Dasari&nbsp;|&nbsp; 2016 </footer>
+</body>
+</html>
